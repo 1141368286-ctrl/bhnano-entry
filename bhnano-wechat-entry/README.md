@@ -1,51 +1,41 @@
 # 北航智能微纳公共创新中心微信 H5 快捷入口
 
-这个目录是一个静态 H5 入口页，适合部署到 HTTPS 域名后在微信里打开。
+这是一个适合放在 GitHub Pages、Cloudflare Pages 等 HTTPS 静态托管上的 H5 入口页。页面面向手机和微信使用，重点优化了设备预约前的浏览与选择流程。
+
+## 当前功能
+
+- 微信/手机友好的入口界面。
+- 校内 SSO 登录入口，并尝试让登录后回到本 H5 控制台。
+- 本机登录时间记录，仅保存在当前浏览器 `localStorage`，不含账号、密码、Cookie。
+- 160 台公开设备的 H5 设备中心。
+- 设备搜索、分类筛选、图片卡片、负责人、联系人、地点、详情抽屉。
+- 公开详情页里的型号、规格、厂家、主要规格、主要功能、注意事项、收费标准等文字说明。
+- 每台设备的机时预约、送样预约、原站公开详情入口。
+
+## 重要边界
+
+原系统登录、实时号源、最终预约提交、账号密码仍由原系统处理。本入口页只负责设备浏览、预约前选择和跳转，不代理登录，不保存密码，不提交预约表单。
+
+原站响应头包含 `X-Frame-Options: SAMEORIGIN`，第三方页面不能直接 iframe 嵌入原系统。因此目前采用“优化 H5 前端 + 跳转原系统具体业务页”的方案。
 
 ## 文件
 
-- `index.html`：手机端入口页面
-- `manifest.webmanifest`：类 App/PWA 配置
-- `icon.svg`：入口图标
+- `index.html`：手机端入口页，已内置设备中心和设备数据。
+- `manifest.webmanifest`：类 App/PWA 配置。
+- `icon.svg`：入口图标。
+- `.nojekyll`：让 GitHub Pages 按普通静态文件发布。
 
-## 使用方式
+## GitHub Pages 部署
 
-1. 把整个 `bhnano-wechat-entry` 目录上传到一个 HTTPS 网站空间。
-2. 在微信中发送部署后的 `index.html` 地址。
-3. 用户点开后可通过“校内单点登录”“平台首页”“仪器展示”等入口跳转到原系统。
+1. 把本目录里的文件上传到仓库，例如 `bhnano-entry/bhnano-wechat-entry/`。
+2. 在仓库 `Settings` 打开 `Pages`。
+3. `Build and deployment` 选择 `Deploy from a branch`。
+4. `Branch` 选择 `main`，目录选择 `/root`。
+5. 保存后等待 1-3 分钟。
+6. 访问类似下面的地址：
 
-## 免费部署方案：GitHub Pages
+   `https://你的用户名.github.io/bhnano-entry/bhnano-wechat-entry/`
 
-GitHub Pages 可以免费托管静态网页，适合这个入口页。
+## 发布提醒
 
-1. 注册或登录 GitHub。
-2. 新建一个公开仓库，例如 `bhnano-entry`。
-3. 上传本目录里的全部文件：`index.html`、`manifest.webmanifest`、`icon.svg`、`README.md`。
-4. 进入仓库的 `Settings`。
-5. 左侧打开 `Pages`。
-6. `Build and deployment` 选择 `Deploy from a branch`。
-7. `Branch` 选择 `main`，目录选择 `/root`，保存。
-8. 等待 1-3 分钟，GitHub 会给出一个地址，通常类似：
-
-   `https://你的用户名.github.io/bhnano-entry/`
-
-把这个地址发到微信即可长期使用。
-
-注意：GitHub Pages 页面默认公开，不能放账号、密码、内部文件或敏感数据。本入口页只放公开跳转链接，适合部署。
-
-## 其他免费方案
-
-- Cloudflare Pages：免费、速度通常较好，也支持 GitHub 仓库自动部署。
-- Netlify：可以直接拖拽整个文件夹部署，适合不会 Git 命令的用户。
-- Vercel：也可部署静态网页，但对简单入口页来说功能偏多。
-
-## 重要限制
-
-原站响应头包含 `X-Frame-Options: SAMEORIGIN`，因此第三方页面不能把原系统直接嵌入 iframe。这个入口页采用跳转式方案，不会代理登录，也不会保存账号密码。
-
-如果要做真正的微信小程序，需要：
-
-- 申请或使用已有微信小程序账号与 `AppID`
-- 在小程序后台配置合法业务域名
-- 原系统支持小程序内 WebView 或提供可调用 API
-- 按学校/平台要求完成登录与数据安全合规
+GitHub Pages 默认公开。设备数据来自原系统公开页面，其中可能包含联系人、手机号和地点。若仓库是 Public，发布前应确认这些公开信息允许同步展示到 GitHub Pages。
