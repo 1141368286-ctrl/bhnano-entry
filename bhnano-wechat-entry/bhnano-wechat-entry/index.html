@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f6b5f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="微纳平台">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="format-detection" content="telephone=no">
+  <title>北航智能微纳公共创新中心快捷入口</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --surface-soft: #eef5f3;
+      --ink: #17212f;
+      --muted: #5c6675;
+      --line: #d9e1e8;
+      --green: #0f6b5f;
+      --green-press: #0a4f46;
+      --blue: #1f5fa8;
+      --amber: #c35d19;
+      --shadow: 0 16px 40px rgba(15, 35, 55, .12);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    a,
+    button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 520px;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #f8fbfd 0%, #f4f7f9 48%, #eef3f2 100%);
+      padding: max(18px, env(safe-area-inset-top)) 18px max(28px, env(safe-area-inset-bottom));
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 54px;
+    }
+
+    .logo-wrap {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: 0 6px 20px rgba(28, 45, 70, .08);
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .logo-wrap img {
+      max-width: 40px;
+      max-height: 40px;
+      object-fit: contain;
+    }
+
+    .title-block {
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 750;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin: 4px 0 0;
+      font-size: 12px;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 28px;
+      min-width: 58px;
+      padding: 0 10px;
+      border: 1px solid rgba(15, 107, 95, .24);
+      border-radius: 999px;
+      background: rgba(15, 107, 95, .08);
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .hero {
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .hero h2 {
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.25;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .hero p {
+      margin: 9px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .primary-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      min-height: 48px;
+      padding: 0 16px;
+      border: 0;
+      border-radius: 8px;
+      color: #fff;
+      background: var(--green);
+      font-size: 16px;
+      font-weight: 750;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .14s ease, background-color .14s ease, box-shadow .14s ease;
+      box-shadow: 0 12px 24px rgba(15, 107, 95, .22);
+    }
+
+    .button:active {
+      transform: translateY(1px);
+      background: var(--green-press);
+      box-shadow: 0 6px 16px rgba(15, 107, 95, .18);
+    }
+
+    .button.secondary {
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: #fff;
+      box-shadow: none;
+    }
+
+    .button.secondary:active {
+      background: #eef3f7;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 22px 2px 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .tile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 76px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: 0 8px 22px rgba(25, 44, 66, .07);
+    }
+
+    .tile:active {
+      background: #eef3f7;
+    }
+
+    .tile-icon {
+      display: grid;
+      place-items: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--surface-soft);
+      color: var(--green);
+      flex: 0 0 auto;
+    }
+
+    .tile:nth-child(2) .tile-icon,
+    .tile:nth-child(5) .tile-icon {
+      background: rgba(31, 95, 168, .1);
+      color: var(--blue);
+    }
+
+    .tile:nth-child(3) .tile-icon,
+    .tile:nth-child(6) .tile-icon {
+      background: rgba(195, 93, 25, .1);
+      color: var(--amber);
+    }
+
+    .tile-text {
+      min-width: 0;
+    }
+
+    .tile-title {
+      display: block;
+      font-size: 15px;
+      font-weight: 750;
+      line-height: 1.25;
+    }
+
+    .tile-sub {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+
+    .media-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .media-row img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      object-fit: cover;
+      background: #fff;
+    }
+
+    .notice {
+      margin-top: 16px;
+      padding: 13px 14px;
+      border: 1px solid rgba(195, 93, 25, .22);
+      border-radius: 8px;
+      background: rgba(195, 93, 25, .08);
+      color: #5c3420;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .record-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      padding: 12px;
+      border: 1px solid rgba(15, 107, 95, .18);
+      border-radius: 8px;
+      background: rgba(15, 107, 95, .07);
+    }
+
+    .record-panel[hidden] {
+      display: none;
+    }
+
+    .record-title {
+      display: block;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.35;
+    }
+
+    .record-time {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .text-button {
+      flex: 0 0 auto;
+      min-height: 34px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--muted);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: max(22px, env(safe-area-inset-bottom));
+      z-index: 5;
+      width: min(calc(100% - 36px), 420px);
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: rgba(23, 33, 47, .94);
+      color: #fff;
+      font-size: 13px;
+      line-height: 1.4;
+      text-align: center;
+      transform: translate(-50%, 18px);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform .18s ease, opacity .18s ease;
+    }
+
+    .toast.show {
+      transform: translate(-50%, 0);
+      opacity: 1;
+    }
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (min-width: 760px) {
+      body {
+        align-items: center;
+        padding: 32px;
+      }
+
+      .app {
+        min-height: auto;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: 0 22px 60px rgba(20, 35, 55, .14);
+      }
+    }
+
+    @media (max-width: 360px) {
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="logo-wrap" aria-hidden="true">
+        <img src="https://bhnano.buaa.edu.cn/UploadFiles/LabOrganizationLogo/4912bfc5-6c3f-454c-ad04-bff718428f1b.gif" alt="">
+      </div>
+      <div class="title-block">
+        <h1>北航智能微纳公共创新中心</h1>
+        <p class="subtitle">开放系统快捷入口</p>
+      </div>
+      <span class="status" id="envStatus">H5</span>
+    </header>
+
+    <section class="hero" aria-labelledby="mainTitle">
+      <h2 id="mainTitle">微纳平台</h2>
+      <p id="heroText">面向手机和微信的快捷入口，登录成功后回到本页继续选择功能。</p>
+      <div class="primary-actions">
+        <a class="button" id="ssoBtn" href="https://sso.buaa.edu.cn/login?service=http://bhnano.buaa.edu.cn/Account/CasValidateSuccessCallBack?serviceURL=http://bhnano.buaa.edu.cn/Home/Index?XPath=000">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10 17l5-5-5-5M15 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          校内登录并返回 H5
+        </a>
+        <a class="button secondary" href="https://bhnano.buaa.edu.cn/Home/Index?XPath=000">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+            <path d="M3 10.5 12 3l9 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 10v10h14V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          打开平台首页
+        </a>
+      </div>
+      <div class="record-panel" id="loginRecord" hidden>
+        <span>
+          <span class="record-title" id="recordTitle">本机登录记录</span>
+          <span class="record-time" id="recordTime">仅保存在当前手机浏览器，不含账号密码</span>
+        </span>
+        <button class="text-button" id="clearRecordBtn" type="button">清除</button>
+      </div>
+    </section>
+
+    <div class="section-title">登录后业务入口</div>
+    <nav class="quick-grid" aria-label="登录后业务入口">
+      <a class="tile" id="sampleBtn" href="https://bhnano.buaa.edu.cn/PersonCenter?CenterBoxUrl=%2FSampleManage%2FSampleApplyPersonalListIndex">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 2h6M10 2v6l-6 10a3 3 0 0 0 2.6 4h10.8A3 3 0 0 0 20 18L14 8V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 16h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">样品委托</span><span class="tile-sub">登录后办理</span></span>
+      </a>
+      <a class="tile" id="appointmentBtn" href="https://bhnano.buaa.edu.cn/PersonCenter?CenterBoxUrl=%2FAppointment%2FHistoryIndex">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 2v4M16 2v4M4 9h16M6 4h12a2 2 0 0 1 2 2v14H4V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m8 14 2 2 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">预约记录</span><span class="tile-sub">查看历史</span></span>
+      </a>
+      <a class="tile" id="userCenterBtn" href="https://bhnano.buaa.edu.cn/PersonCenter?CenterBoxUrl=%2FAccount%2FManage">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">个人中心</span><span class="tile-sub">账号资料</span></span>
+      </a>
+      <a class="tile" href="https://bhnano.buaa.edu.cn/Equipment/ShowList?XPath=000">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 19h16M6 19V8h12v11M9 8V5h6v3M9 12h6M9 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">仪器设备</span><span class="tile-sub">预约入口</span></span>
+      </a>
+    </nav>
+
+    <div class="section-title">常用入口</div>
+    <nav class="quick-grid" aria-label="常用入口">
+      <a class="tile" href="https://bhnano.buaa.edu.cn/Equipment/ShowList?XPath=000">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 3h10M9 3v6l-5 8a3 3 0 0 0 2.6 4h10.8A3 3 0 0 0 20 17l-5-8V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">仪器展示</span><span class="tile-sub">设备目录</span></span>
+      </a>
+      <a class="tile" href="https://bhnano.buaa.edu.cn/Article/ShowList?ArticleCategoryId=3dfc9203-0327-4136-8cbe-e8449bb11790&XPath=000">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M7 3h7l4 4v14H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 3v5h5M8 13h8M8 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">流程制度</span><span class="tile-sub">注册与培训</span></span>
+      </a>
+      <a class="tile" href="https://bhnano.buaa.edu.cn/Account/Register">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM19 8v6M22 11h-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">注册账号</span><span class="tile-sub">新用户</span></span>
+      </a>
+      <a class="tile" href="https://bhnano.buaa.edu.cn/Account/ForgetPassword">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 17h.01M8 10a4 4 0 1 1 6.8 2.8c-1.2 1-2.8 1.7-2.8 3.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">找回密码</span><span class="tile-sub">账号帮助</span></span>
+      </a>
+      <a class="tile" href="https://bhnano.buaa.edu.cn/Article/Show/59dd9179-3f8b-445d-b440-79af61a00d47?ArticleCategoryId=6efc92bf-672a-415e-8254-387ae5d3baa2&XPath=000">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0Z" stroke="currentColor" stroke-width="2"/><path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="2"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">联系我们</span><span class="tile-sub">地点与方式</span></span>
+      </a>
+      <button class="tile" type="button" id="copyBtn">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 9h10v10H9z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">复制链接</span><span class="tile-sub">原站地址</span></span>
+      </button>
+    </nav>
+
+    <div class="section-title">设备速览</div>
+    <div class="media-row" aria-hidden="true">
+      <img loading="lazy" src="https://bhnano.buaa.edu.cn/UploadFiles/EquipmentIcons/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201014110310.jpg" alt="">
+      <img loading="lazy" src="https://bhnano.buaa.edu.cn/UploadFiles/EquipmentIcons/ICP.jpg" alt="">
+      <img loading="lazy" src="https://bhnano.buaa.edu.cn/UploadFiles/EquipmentIcons/%E7%B4%AB%E5%A4%96%E6%9B%9D%E5%85%89.jpg" alt="">
+    </div>
+
+    <p class="notice">登录、预约、账号密码仍由原系统处理。此入口页只负责跳转和回到 H5 控制台，不采集、不保存、不转发任何账号密码。</p>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const HOME_URL = "https://bhnano.buaa.edu.cn/Home/Index?XPath=000";
+    const LOGIN_CALLBACK_URL = "http://bhnano.buaa.edu.cn/Account/CasValidateSuccessCallBack";
+    const PERSON_CENTER_URL = "https://bhnano.buaa.edu.cn/PersonCenter";
+    const LOGIN_RECORD_KEY = "bhnano_h5_login_record";
+    const statusEl = document.getElementById("envStatus");
+    const heroTextEl = document.getElementById("heroText");
+    const toastEl = document.getElementById("toast");
+    const ssoBtnEl = document.getElementById("ssoBtn");
+    const loginRecordEl = document.getElementById("loginRecord");
+    const recordTitleEl = document.getElementById("recordTitle");
+    const recordTimeEl = document.getElementById("recordTime");
+    const clearRecordBtnEl = document.getElementById("clearRecordBtn");
+    const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
+    const hasReturnedFromLogin = new URLSearchParams(window.location.search).get("login") === "returned";
+
+    statusEl.textContent = hasReturnedFromLogin ? "已返回" : isWeChat ? "微信内" : "H5";
+    if (hasReturnedFromLogin) {
+      heroTextEl.textContent = "已回到 H5 控制台。请选择下方业务入口继续操作。";
+    }
+
+    function buildReturnUrl() {
+      const url = new URL(window.location.href);
+      url.searchParams.set("login", "returned");
+      url.hash = "";
+      return url.toString();
+    }
+
+    function buildSsoUrl() {
+      const callback = `${LOGIN_CALLBACK_URL}?serviceURL=${encodeURIComponent(buildReturnUrl())}`;
+      return `https://sso.buaa.edu.cn/login?service=${encodeURIComponent(callback)}`;
+    }
+
+    function centerRoute(path) {
+      const target = `${path}?date=${Date.now()}`;
+      return `${PERSON_CENTER_URL}?CenterBoxUrl=${encodeURIComponent(target)}`;
+    }
+
+    function readLoginRecord() {
+      try {
+        return JSON.parse(localStorage.getItem(LOGIN_RECORD_KEY) || "{}");
+      } catch (error) {
+        return {};
+      }
+    }
+
+    function writeLoginRecord(patch) {
+      const record = { ...readLoginRecord(), ...patch };
+      localStorage.setItem(LOGIN_RECORD_KEY, JSON.stringify(record));
+      renderLoginRecord();
+    }
+
+    function formatLocalTime(value) {
+      if (!value) return "";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "";
+      return date.toLocaleString("zh-CN", {
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    function renderLoginRecord() {
+      const record = readLoginRecord();
+      const returnedAt = formatLocalTime(record.lastReturnedAt);
+      const clickedAt = formatLocalTime(record.lastLoginClickAt);
+
+      if (!returnedAt && !clickedAt) {
+        loginRecordEl.hidden = true;
+        return;
+      }
+
+      loginRecordEl.hidden = false;
+      if (returnedAt) {
+        recordTitleEl.textContent = "最近已返回 H5";
+        recordTimeEl.textContent = `${returnedAt}，仅为本机记录，不含账号密码`;
+      } else {
+        recordTitleEl.textContent = "最近点击过登录";
+        recordTimeEl.textContent = `${clickedAt}，等待登录后返回 H5`;
+      }
+    }
+
+    ssoBtnEl.href = buildSsoUrl();
+    document.getElementById("sampleBtn").href = centerRoute("/SampleManage/SampleApplyPersonalListIndex");
+    document.getElementById("appointmentBtn").href = centerRoute("/Appointment/HistoryIndex");
+    document.getElementById("userCenterBtn").href = centerRoute("/Account/Manage");
+
+    if (hasReturnedFromLogin) {
+      writeLoginRecord({ lastReturnedAt: Date.now() });
+    } else {
+      renderLoginRecord();
+    }
+
+    ssoBtnEl.addEventListener("click", () => {
+      writeLoginRecord({ lastLoginClickAt: Date.now() });
+    });
+
+    clearRecordBtnEl.addEventListener("click", () => {
+      localStorage.removeItem(LOGIN_RECORD_KEY);
+      renderLoginRecord();
+      toast("已清除本机登录记录");
+    });
+
+    function toast(message) {
+      toastEl.textContent = message;
+      toastEl.classList.add("show");
+      window.clearTimeout(window.__toastTimer);
+      window.__toastTimer = window.setTimeout(() => toastEl.classList.remove("show"), 2200);
+    }
+
+    async function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return;
+      }
+      const area = document.createElement("textarea");
+      area.value = text;
+      area.setAttribute("readonly", "");
+      area.style.position = "fixed";
+      area.style.opacity = "0";
+      document.body.appendChild(area);
+      area.select();
+      document.execCommand("copy");
+      area.remove();
+    }
+
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      try {
+        await copyText(HOME_URL);
+        toast("已复制原站链接");
+      } catch (error) {
+        toast("复制失败，请长按按钮或手动复制");
+      }
+    });
+  </script>
+</body>
+</html>
