@@ -294,6 +294,52 @@
       line-height: 1.6;
     }
 
+    .record-panel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      padding: 12px;
+      border: 1px solid rgba(15, 107, 95, .18);
+      border-radius: 8px;
+      background: rgba(15, 107, 95, .07);
+    }
+
+    .record-panel[hidden] {
+      display: none;
+    }
+
+    .record-title {
+      display: block;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 750;
+      line-height: 1.35;
+    }
+
+    .record-time {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .text-button {
+      flex: 0 0 auto;
+      min-height: 34px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--muted);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+
     .toast {
       position: fixed;
       left: 50%;
@@ -364,14 +410,14 @@
 
     <section class="hero" aria-labelledby="mainTitle">
       <h2 id="mainTitle">微纳平台</h2>
-      <p>面向手机和微信的快捷入口，保留原系统登录与业务流程。</p>
+      <p id="heroText">面向手机和微信的快捷入口，登录成功后回到本页继续选择功能。</p>
       <div class="primary-actions">
         <a class="button" id="ssoBtn" href="https://sso.buaa.edu.cn/login?service=http://bhnano.buaa.edu.cn/Account/CasValidateSuccessCallBack?serviceURL=http://bhnano.buaa.edu.cn/Home/Index?XPath=000">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
             <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             <path d="M10 17l5-5-5-5M15 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          校内单点登录
+          校内登录并返回 H5
         </a>
         <a class="button secondary" href="https://bhnano.buaa.edu.cn/Home/Index?XPath=000">
           <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
@@ -381,7 +427,42 @@
           打开平台首页
         </a>
       </div>
+      <div class="record-panel" id="loginRecord" hidden>
+        <span>
+          <span class="record-title" id="recordTitle">本机登录记录</span>
+          <span class="record-time" id="recordTime">仅保存在当前手机浏览器，不含账号密码</span>
+        </span>
+        <button class="text-button" id="clearRecordBtn" type="button">清除</button>
+      </div>
     </section>
+
+    <div class="section-title">登录后业务入口</div>
+    <nav class="quick-grid" aria-label="登录后业务入口">
+      <a class="tile" id="sampleBtn" href="https://bhnano.buaa.edu.cn/PersonCenter?CenterBoxUrl=%2FSampleManage%2FSampleApplyPersonalListIndex">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 2h6M10 2v6l-6 10a3 3 0 0 0 2.6 4h10.8A3 3 0 0 0 20 18L14 8V2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 16h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">样品委托</span><span class="tile-sub">登录后办理</span></span>
+      </a>
+      <a class="tile" id="appointmentBtn" href="https://bhnano.buaa.edu.cn/PersonCenter?CenterBoxUrl=%2FAppointment%2FHistoryIndex">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 2v4M16 2v4M4 9h16M6 4h12a2 2 0 0 1 2 2v14H4V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m8 14 2 2 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">预约记录</span><span class="tile-sub">查看历史</span></span>
+      </a>
+      <a class="tile" id="userCenterBtn" href="https://bhnano.buaa.edu.cn/PersonCenter?CenterBoxUrl=%2FAccount%2FManage">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20 21a8 8 0 0 0-16 0M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">个人中心</span><span class="tile-sub">账号资料</span></span>
+      </a>
+      <a class="tile" href="https://bhnano.buaa.edu.cn/Equipment/ShowList?XPath=000">
+        <span class="tile-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 19h16M6 19V8h12v11M9 8V5h6v3M9 12h6M9 16h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="tile-text"><span class="tile-title">仪器设备</span><span class="tile-sub">预约入口</span></span>
+      </a>
+    </nav>
 
     <div class="section-title">常用入口</div>
     <nav class="quick-grid" aria-label="常用入口">
@@ -430,18 +511,115 @@
       <img loading="lazy" src="https://bhnano.buaa.edu.cn/UploadFiles/EquipmentIcons/%E7%B4%AB%E5%A4%96%E6%9B%9D%E5%85%89.jpg" alt="">
     </div>
 
-    <p class="notice">登录、预约、账号密码仍由原系统处理。此入口页不采集、不保存、不转发任何账号密码。</p>
+    <p class="notice">登录、预约、账号密码仍由原系统处理。此入口页只负责跳转和回到 H5 控制台，不采集、不保存、不转发任何账号密码。</p>
   </main>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
     const HOME_URL = "https://bhnano.buaa.edu.cn/Home/Index?XPath=000";
+    const LOGIN_CALLBACK_URL = "http://bhnano.buaa.edu.cn/Account/CasValidateSuccessCallBack";
+    const PERSON_CENTER_URL = "https://bhnano.buaa.edu.cn/PersonCenter";
+    const LOGIN_RECORD_KEY = "bhnano_h5_login_record";
     const statusEl = document.getElementById("envStatus");
+    const heroTextEl = document.getElementById("heroText");
     const toastEl = document.getElementById("toast");
+    const ssoBtnEl = document.getElementById("ssoBtn");
+    const loginRecordEl = document.getElementById("loginRecord");
+    const recordTitleEl = document.getElementById("recordTitle");
+    const recordTimeEl = document.getElementById("recordTime");
+    const clearRecordBtnEl = document.getElementById("clearRecordBtn");
     const isWeChat = /MicroMessenger/i.test(navigator.userAgent);
+    const hasReturnedFromLogin = new URLSearchParams(window.location.search).get("login") === "returned";
 
-    statusEl.textContent = isWeChat ? "微信内" : "H5";
+    statusEl.textContent = hasReturnedFromLogin ? "已返回" : isWeChat ? "微信内" : "H5";
+    if (hasReturnedFromLogin) {
+      heroTextEl.textContent = "已回到 H5 控制台。请选择下方业务入口继续操作。";
+    }
+
+    function buildReturnUrl() {
+      const url = new URL(window.location.href);
+      url.searchParams.set("login", "returned");
+      url.hash = "";
+      return url.toString();
+    }
+
+    function buildSsoUrl() {
+      const callback = `${LOGIN_CALLBACK_URL}?serviceURL=${encodeURIComponent(buildReturnUrl())}`;
+      return `https://sso.buaa.edu.cn/login?service=${encodeURIComponent(callback)}`;
+    }
+
+    function centerRoute(path) {
+      const target = `${path}?date=${Date.now()}`;
+      return `${PERSON_CENTER_URL}?CenterBoxUrl=${encodeURIComponent(target)}`;
+    }
+
+    function readLoginRecord() {
+      try {
+        return JSON.parse(localStorage.getItem(LOGIN_RECORD_KEY) || "{}");
+      } catch (error) {
+        return {};
+      }
+    }
+
+    function writeLoginRecord(patch) {
+      const record = { ...readLoginRecord(), ...patch };
+      localStorage.setItem(LOGIN_RECORD_KEY, JSON.stringify(record));
+      renderLoginRecord();
+    }
+
+    function formatLocalTime(value) {
+      if (!value) return "";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return "";
+      return date.toLocaleString("zh-CN", {
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit"
+      });
+    }
+
+    function renderLoginRecord() {
+      const record = readLoginRecord();
+      const returnedAt = formatLocalTime(record.lastReturnedAt);
+      const clickedAt = formatLocalTime(record.lastLoginClickAt);
+
+      if (!returnedAt && !clickedAt) {
+        loginRecordEl.hidden = true;
+        return;
+      }
+
+      loginRecordEl.hidden = false;
+      if (returnedAt) {
+        recordTitleEl.textContent = "最近已返回 H5";
+        recordTimeEl.textContent = `${returnedAt}，仅为本机记录，不含账号密码`;
+      } else {
+        recordTitleEl.textContent = "最近点击过登录";
+        recordTimeEl.textContent = `${clickedAt}，等待登录后返回 H5`;
+      }
+    }
+
+    ssoBtnEl.href = buildSsoUrl();
+    document.getElementById("sampleBtn").href = centerRoute("/SampleManage/SampleApplyPersonalListIndex");
+    document.getElementById("appointmentBtn").href = centerRoute("/Appointment/HistoryIndex");
+    document.getElementById("userCenterBtn").href = centerRoute("/Account/Manage");
+
+    if (hasReturnedFromLogin) {
+      writeLoginRecord({ lastReturnedAt: Date.now() });
+    } else {
+      renderLoginRecord();
+    }
+
+    ssoBtnEl.addEventListener("click", () => {
+      writeLoginRecord({ lastLoginClickAt: Date.now() });
+    });
+
+    clearRecordBtnEl.addEventListener("click", () => {
+      localStorage.removeItem(LOGIN_RECORD_KEY);
+      renderLoginRecord();
+      toast("已清除本机登录记录");
+    });
 
     function toast(message) {
       toastEl.textContent = message;
