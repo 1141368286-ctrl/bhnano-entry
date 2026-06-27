@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-06-27T14:48:01.807Z",
+  "generatedAt": "2026-06-27T16:11:58.163Z",
   "source": "https://bhnano.buaa.edu.cn/EquipmentAsync/GetEquipmentCurStatusInfo",
   "privacy": "Only public equipment state is stored. User ids, user names, cookies, and account data are omitted.",
   "count": 160,
   "summary": {
-    "idle": 147,
-    "unknown": 1,
-    "busy": 12
+    "idle": 149,
+    "unknown": 2,
+    "busy": 9
   },
   "items": [
     {
@@ -38,12 +38,12 @@
     },
     {
       "id": "b9c4c4a1-fc0a-4403-bb7e-0bd7d910271a",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "78482783-ea04-493a-9f87-0e06605e45e9",
@@ -236,11 +236,11 @@
     },
     {
       "id": "7052ff4c-d308-4861-b79f-376fdcf09401",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-06-27 22:37",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -434,11 +434,11 @@
     },
     {
       "id": "82d17dbc-6030-47fe-9ac0-5b7560431df9",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-06-27 15:57",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -659,11 +659,11 @@
     },
     {
       "id": "5dbcc0b0-e677-420f-b6ab-990419c95707",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-06-27 22:26",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
