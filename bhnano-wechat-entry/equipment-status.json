@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-24T03:09:53.708Z",
+  "generatedAt": "2026-08-24T04:22:39.100Z",
   "source": "https://bhnano.buaa.edu.cn/EquipmentAsync/GetEquipmentCurStatusInfo",
   "privacy": "Only public equipment state is stored. User ids, user names, cookies, and account data are omitted.",
   "count": 160,
   "summary": {
-    "idle": 147,
-    "busy": 13
+    "idle": 146,
+    "busy": 14
   },
   "items": [
     {
@@ -55,11 +55,11 @@
     },
     {
       "id": "cfbfe5a9-0fef-4610-b5b6-0f2d4d602cdf",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-08-24 11:01",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -604,11 +604,11 @@
     },
     {
       "id": "9e4420aa-7aa3-43b1-aa61-899604b63ae2",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
+      "statusCode": 1,
+      "statusName": "正在使用",
+      "label": "使用中",
+      "className": "busy",
+      "hint": "当前快照显示正在使用，开机时间 2026-08-24 11:33",
       "ok": true
     },
     {
@@ -730,11 +730,11 @@
     },
     {
       "id": "00639107-156b-42f7-a706-a7f0323ca75c",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
+      "statusCode": 1,
+      "statusName": "正在使用",
+      "label": "使用中",
+      "className": "busy",
+      "hint": "当前快照显示正在使用，开机时间 2026-08-24 12:05",
       "ok": true
     },
     {
