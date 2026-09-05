@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-04T23:51:50.761Z",
+  "generatedAt": "2026-09-05T03:59:14.373Z",
   "source": "https://bhnano.buaa.edu.cn/EquipmentAsync/GetEquipmentCurStatusInfo",
   "privacy": "Only public equipment state is stored. User ids, user names, cookies, and account data are omitted.",
   "count": 160,
   "summary": {
-    "busy": 13,
-    "idle": 147
+    "busy": 14,
+    "idle": 146
   },
   "items": [
     {
@@ -226,11 +226,11 @@
     },
     {
       "id": "ba3316ae-6cbf-47f5-8a02-34674e70b891",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
+      "statusCode": 1,
+      "statusName": "正在使用",
+      "label": "使用中",
+      "className": "busy",
+      "hint": "当前快照显示正在使用，开机时间 2026-09-05 11:24",
       "ok": true
     },
     {
