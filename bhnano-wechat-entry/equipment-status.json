@@ -1,11 +1,10 @@
 {
-  "generatedAt": "2026-09-13T14:52:33.582Z",
+  "generatedAt": "2026-09-13T18:02:19.741Z",
   "source": "https://bhnano.buaa.edu.cn/EquipmentAsync/GetEquipmentCurStatusInfo",
   "privacy": "Only public equipment state is stored. User ids, user names, cookies, and account data are omitted.",
   "count": 160,
   "summary": {
-    "unknown": 149,
-    "idle": 11
+    "unknown": 160
   },
   "items": [
     {
@@ -64,12 +63,12 @@
     },
     {
       "id": "655b3c38-419f-43f0-8a1a-110adc469115",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "d5bf0396-3d21-41aa-8d38-119bbfa497be",
@@ -460,12 +459,12 @@
     },
     {
       "id": "8564af97-523b-4264-88a7-5f9a6691387c",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "15bdc6d3-28a9-475b-a263-62330791a654",
@@ -532,12 +531,12 @@
     },
     {
       "id": "bce6aff3-4c6b-4dcb-a7fb-78dcb6415d0f",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "8bfd2d97-056b-4d86-b389-798eb8db93fc",
@@ -604,12 +603,12 @@
     },
     {
       "id": "9e4420aa-7aa3-43b1-aa61-899604b63ae2",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "d0bacaab-3f2a-4f72-a459-8cf6bc3ce921",
@@ -676,12 +675,12 @@
     },
     {
       "id": "41655e56-6d90-4357-8599-9ea9b7d822ad",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "d0eb3c38-e841-4965-8fc7-9fb6cdc85f73",
@@ -811,12 +810,12 @@
     },
     {
       "id": "27b301fb-553b-4104-a063-b5959f101ffe",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "1244076b-c2f8-4c1d-970e-bb7ceae5967d",
@@ -883,12 +882,12 @@
     },
     {
       "id": "b3b32e4c-bec2-4caa-aea6-d3d3e51d1477",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "9794e42b-aec9-4bbd-818d-d44cebf825ce",
@@ -955,12 +954,12 @@
     },
     {
       "id": "a4cf3ecf-bccb-458f-bdc2-dd751550d2da",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "6d31f3aa-bd4d-4f80-86b9-df18678444a3",
@@ -1027,12 +1026,12 @@
     },
     {
       "id": "b10e517e-09b5-4e8a-92e7-e769b6b79e70",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "bf275e13-32b7-440f-b96e-f01821957464",
@@ -1162,12 +1161,12 @@
     },
     {
       "id": "077d8d2a-875a-4e84-9e9d-be2e0a02ea57",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "02c8e620-a128-4bb3-843c-eaf8eb21236a",
@@ -1360,12 +1359,12 @@
     },
     {
       "id": "6f1482e4-38f5-471c-95b8-9cc5fbcc4cbc",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "fc7f2aa1-b2c3-40d4-85f7-b3e21d52bcb7",
