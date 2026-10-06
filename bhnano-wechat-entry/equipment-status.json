@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T00:15:30.781Z",
+  "generatedAt": "2026-10-06T06:46:08.840Z",
   "source": "https://bhnano.buaa.edu.cn/EquipmentAsync/GetEquipmentCurStatusInfo",
   "privacy": "Only public equipment state is stored. User ids, user names, cookies, and account data are omitted.",
   "count": 160,
@@ -1148,7 +1148,7 @@
       "statusName": "正在使用",
       "label": "使用中",
       "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-10-04 14:24",
+      "hint": "当前快照显示正在使用，开机时间 2026-10-06 14:31",
       "ok": true
     },
     {
