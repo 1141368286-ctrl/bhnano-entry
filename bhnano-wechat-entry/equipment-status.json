@@ -1,11 +1,10 @@
 {
-  "generatedAt": "2026-10-07T11:57:39.562Z",
+  "generatedAt": "2026-10-07T18:49:48.574Z",
   "source": "https://bhnano.buaa.edu.cn/EquipmentAsync/GetEquipmentCurStatusInfo",
   "privacy": "Only public equipment state is stored. User ids, user names, cookies, and account data are omitted.",
   "count": 160,
   "summary": {
-    "unknown": 156,
-    "idle": 4
+    "unknown": 160
   },
   "items": [
     {
@@ -982,12 +981,12 @@
     },
     {
       "id": "b58114a1-c4a0-4bc2-a5c4-dfd3c9e59c6b",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "31bc1deb-a619-4886-b7cd-e2a485550e9d",
@@ -1207,12 +1206,12 @@
     },
     {
       "id": "caf54acb-1509-4aac-b734-2abccef83414",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "facdd65f-2048-46e0-a83a-2d4409e1e282",
@@ -1279,12 +1278,12 @@
     },
     {
       "id": "543ae7a2-a85b-472c-aa22-55138e020a2a",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "17ddc415-4607-4479-be5c-5ee324743d53",
@@ -1414,12 +1413,12 @@
     },
     {
       "id": "7d367539-a62e-4011-9413-cb6eb6f84d65",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "9a1d5778-be5b-4424-a2c9-cdbb1c6939d2",
