@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-18T09:49:01.654Z",
+  "generatedAt": "2026-10-18T13:52:35.916Z",
   "source": "https://bhnano.buaa.edu.cn/EquipmentAsync/GetEquipmentCurStatusInfo",
   "privacy": "Only public equipment state is stored. User ids, user names, cookies, and account data are omitted.",
   "count": 160,
   "summary": {
-    "idle": 148,
-    "busy": 12
+    "idle": 146,
+    "busy": 14
   },
   "items": [
     {
@@ -388,11 +388,11 @@
     },
     {
       "id": "f2e18d34-f2d2-42ec-9324-557ea4bd49f7",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
+      "statusCode": 1,
+      "statusName": "正在使用",
+      "label": "使用中",
+      "className": "busy",
+      "hint": "当前快照显示正在使用，开机时间 2026-10-18 19:12",
       "ok": true
     },
     {
@@ -514,11 +514,11 @@
     },
     {
       "id": "84e95ad0-0941-46c7-a919-6f43cc0cb7ad",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
+      "statusCode": 1,
+      "statusName": "正在使用",
+      "label": "使用中",
+      "className": "busy",
+      "hint": "当前快照显示正在使用，开机时间 2026-10-18 18:07",
       "ok": true
     },
     {
@@ -622,11 +622,11 @@
     },
     {
       "id": "a22e6183-51da-4d1d-b2f0-8e7de008ae55",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
+      "statusCode": 1,
+      "statusName": "正在使用",
+      "label": "使用中",
+      "className": "busy",
+      "hint": "当前快照显示正在使用，开机时间 2026-10-18 18:01",
       "ok": true
     },
     {
@@ -703,11 +703,11 @@
     },
     {
       "id": "0a0b1c16-a9fa-490f-a691-a5d044fb4ea7",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-10-18 15:06",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
