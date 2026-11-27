@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-11-27T02:05:25.508Z",
+  "generatedAt": "2026-11-27T11:17:03.406Z",
   "source": "https://bhnano.buaa.edu.cn/EquipmentAsync/GetEquipmentCurStatusInfo",
   "privacy": "Only public equipment state is stored. User ids, user names, cookies, and account data are omitted.",
   "count": 160,
   "summary": {
-    "idle": 128,
-    "busy": 32
+    "idle": 141,
+    "unknown": 3,
+    "busy": 16
   },
   "items": [
     {
@@ -19,12 +20,12 @@
     },
     {
       "id": "6feb8123-839a-451a-973b-093bff7bb8d4",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "6f044e20-b3bf-4e76-9c12-099894849b89",
@@ -55,20 +56,20 @@
     },
     {
       "id": "cfbfe5a9-0fef-4610-b5b6-0f2d4d602cdf",
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
+    },
+    {
+      "id": "655b3c38-419f-43f0-8a1a-110adc469115",
       "statusCode": 0,
       "statusName": "空闲",
       "label": "空闲",
       "className": "idle",
       "hint": "当前快照显示无人使用",
-      "ok": true
-    },
-    {
-      "id": "655b3c38-419f-43f0-8a1a-110adc469115",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 14:51",
       "ok": true
     },
     {
@@ -91,12 +92,12 @@
     },
     {
       "id": "26b5fc9f-a57f-43a6-a980-17d4ba56d89c",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:40",
-      "ok": true
+      "statusCode": null,
+      "statusName": "未知",
+      "label": "未知",
+      "className": "unknown",
+      "hint": "当前状态请以原系统为准",
+      "ok": false
     },
     {
       "id": "79cb2dc7-828f-4d32-b13a-1cbd641c08b9",
@@ -127,20 +128,20 @@
     },
     {
       "id": "ef0815d5-6edf-48f2-8447-220a320d9c92",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:36",
-      "ok": true
-    },
-    {
-      "id": "01892eae-4957-459a-a743-226efefa6c6b",
       "statusCode": 0,
       "statusName": "空闲",
       "label": "空闲",
       "className": "idle",
       "hint": "当前快照显示无人使用",
+      "ok": true
+    },
+    {
+      "id": "01892eae-4957-459a-a743-226efefa6c6b",
+      "statusCode": 1,
+      "statusName": "正在使用",
+      "label": "使用中",
+      "className": "busy",
+      "hint": "当前快照显示正在使用，开机时间 2026-11-27 10:07",
       "ok": true
     },
     {
@@ -199,11 +200,11 @@
     },
     {
       "id": "063522a4-ab04-4fce-acf6-2ba25efbb26b",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:27",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -226,11 +227,11 @@
     },
     {
       "id": "ba3316ae-6cbf-47f5-8a02-34674e70b891",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:55",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -289,11 +290,11 @@
     },
     {
       "id": "5d71965d-90da-4bd2-87d4-3f7e0b61caca",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-25 15:17",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -343,11 +344,11 @@
     },
     {
       "id": "d0b3946e-5c6a-4f96-8392-4dcbee851c75",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:55",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -379,11 +380,11 @@
     },
     {
       "id": "2599f11d-3bb1-4dc3-863f-53d616f5e874",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:40",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -415,11 +416,11 @@
     },
     {
       "id": "eb23744d-6e8f-4eba-ac0b-57359e4d238a",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
+      "statusCode": 1,
+      "statusName": "正在使用",
+      "label": "使用中",
+      "className": "busy",
+      "hint": "当前快照显示正在使用，开机时间 2026-11-27 14:19",
       "ok": true
     },
     {
@@ -514,11 +515,11 @@
     },
     {
       "id": "84e95ad0-0941-46c7-a919-6f43cc0cb7ad",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
+      "statusCode": 1,
+      "statusName": "正在使用",
+      "label": "使用中",
+      "className": "busy",
+      "hint": "当前快照显示正在使用，开机时间 2026-11-27 12:01",
       "ok": true
     },
     {
@@ -541,11 +542,11 @@
     },
     {
       "id": "8bfd2d97-056b-4d86-b389-798eb8db93fc",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:55",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -577,20 +578,20 @@
     },
     {
       "id": "f46ff8ca-f867-4a34-9e59-83140416805c",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-10-22 09:58",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
       "id": "890ef684-24f0-4870-abb2-833f0345fb16",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:37",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -658,11 +659,11 @@
     },
     {
       "id": "5dbcc0b0-e677-420f-b6ab-990419c95707",
-      "statusCode": 0,
-      "statusName": "空闲",
-      "label": "空闲",
-      "className": "idle",
-      "hint": "当前快照显示无人使用",
+      "statusCode": 1,
+      "statusName": "正在使用",
+      "label": "使用中",
+      "className": "busy",
+      "hint": "当前快照显示正在使用，开机时间 2026-11-27 18:58",
       "ok": true
     },
     {
@@ -703,11 +704,11 @@
     },
     {
       "id": "0a0b1c16-a9fa-490f-a691-a5d044fb4ea7",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:55",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -748,11 +749,11 @@
     },
     {
       "id": "2ffed1f8-29c5-4dd1-8261-af31aa931058",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:27",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -775,11 +776,11 @@
     },
     {
       "id": "c7d68794-5886-4c92-aa03-b05e84be88f4",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:37",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -820,11 +821,11 @@
     },
     {
       "id": "1244076b-c2f8-4c1d-970e-bb7ceae5967d",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:37",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -874,11 +875,11 @@
     },
     {
       "id": "c1e1ad63-2b80-41cd-a4ea-cb0ea6f628c9",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:27",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -955,11 +956,11 @@
     },
     {
       "id": "a4cf3ecf-bccb-458f-bdc2-dd751550d2da",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:27",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -982,11 +983,11 @@
     },
     {
       "id": "b58114a1-c4a0-4bc2-a5c4-dfd3c9e59c6b",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-27 09:59",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -1036,11 +1037,11 @@
     },
     {
       "id": "bf275e13-32b7-440f-b96e-f01821957464",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-26 08:36",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
@@ -1081,11 +1082,11 @@
     },
     {
       "id": "42225a7a-9cf4-442f-bf30-2149dcf158ef",
-      "statusCode": 1,
-      "statusName": "正在使用",
-      "label": "使用中",
-      "className": "busy",
-      "hint": "当前快照显示正在使用，开机时间 2026-11-27 07:49",
+      "statusCode": 0,
+      "statusName": "空闲",
+      "label": "空闲",
+      "className": "idle",
+      "hint": "当前快照显示无人使用",
       "ok": true
     },
     {
